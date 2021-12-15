@@ -33,7 +33,7 @@ const Blog = ({posts}) => {
                      {posts?posts.map((post)=>(
                          <Link key={post.id} href={`/blog/${post.id}`} passHref className="cursor-pointer">
                                 
-                            <div className="card p-2 bg-gray-50 dark:bg-slate-900 shadow border dark:border-slate-700" >
+                            <div className="card p-2 bg-gray-50 dark:bg-slate-900 shadow border dark:border-slate-700 cursor-pointer" >
                                 
                                 <div className="card_text">
                                     <h4 className=" text-lg text-gray-800 font-medium my-3 dark:text-gray-100">{post.title}</h4>

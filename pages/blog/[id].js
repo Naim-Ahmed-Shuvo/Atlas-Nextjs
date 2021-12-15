@@ -1,5 +1,7 @@
+
+import Link from 'next/link'
 import React from 'react'
-import { BsEye } from 'react-icons/bs'
+import { BsArrowLeft, BsEye } from 'react-icons/bs'
 import { FiMessageSquare } from 'react-icons/fi'
 import Layout from '../../layout/Layout'
 
@@ -10,6 +12,9 @@ const BlogDetils = ({ post, user, comments }) => {
         <Layout>
             <section className=' mt-32 xs:px-2'>
                 <div className='container mx-auto'>
+                    <Link href={'/blog'} passHref>
+                     <button className='flex justify-center items-center mx-auto py-3 px-3 bg-blue-500 text-slate-50 my-5 rounded'> <BsArrowLeft/> </button>
+                    </Link>
                     <div className="card p-2 bg-gray-50 dark:bg-slate-900 shadow border dark:border-slate-700" >
 
                         <div className="card_text">
