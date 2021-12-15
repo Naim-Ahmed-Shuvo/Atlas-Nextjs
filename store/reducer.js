@@ -1,10 +1,10 @@
 export const initialState = {
     user: null,
     count: "hello",
-    isAuthenticated: true
+    isAuthenticated: false
 }
 
-const reducer = ({state,action})=>{
+const reducer = (state,action)=>{
    switch (action.type) {
        case "Increase":
            return{
@@ -17,6 +17,12 @@ const reducer = ({state,action})=>{
            return{
                ...state,
                count: count--
+           }
+          
+       case "SET_LOGIN":
+           return{
+               ...state,
+               isAuthenticated: true
            }
           
    

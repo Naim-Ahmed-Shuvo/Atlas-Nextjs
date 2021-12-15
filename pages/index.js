@@ -10,7 +10,7 @@ import NewsLetter from '../components/NewsLetter'
 import { useStateValue } from '../store/StateProvider'
 import Router from 'next/router'
 import { useEffect } from 'react'
-import Login from './login'
+import Login from './profile'
 
 export default function Home() {
   const {theme, setTheme} = useTheme()

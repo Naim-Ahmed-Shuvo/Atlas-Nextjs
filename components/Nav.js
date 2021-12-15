@@ -2,9 +2,11 @@ import Link from "next/link";
 import {BsChevronDown,BsCloudSun,BsFillMoonFill,BsMenuUp,BsPinterest,BsSearch,BsTwitter, BsYoutube} from "react-icons/bs"
 import {AiFillFacebook,AiFillInstagram, AiOutlineUser} from "react-icons/ai"
 import {useTheme} from 'next-themes'
+import { useRouter } from "next/router";
 
 const Nav = () => {
     const {theme, setTheme} = useTheme()
+    const router = useRouter();
     const handleClick = () => {
       setTheme(theme === 'dark' ? 'light' : 'dark')
     }
@@ -46,7 +48,7 @@ const Nav = () => {
                 <div className="nav_right_links  items-center xs:hidden  sm:hidden lg:flex ">
                     <div className="searchbox flex items-center border rounded overflow-hidden px-2 mr-8 dark:border-gray-400">
                         <BsSearch className=" text-gray-400 dark:text-gray-500"/>
-                        <input type="text" placeHolder="Search..." className=" border-0 outline-none p-2 bg-transparent"/>
+                        <input type="text" placeholder="Search..." className=" border-0 outline-none p-2 bg-transparent"/>
                     </div>
                     <div className="links flex items-center">
                         <a className="mx-3 cursor-pointer">
@@ -59,7 +61,7 @@ const Nav = () => {
                             <AiFillInstagram className=" text-gray-500 dark:text-gray-400 text-lg dark:hover:text-gray-200"/>
                         </a>
                         <a className="mx-3 cursor-pointer">
-                            <AiOutlineUser className=" text-gray-500 dark:text-gray-400 text-lg dark:hover:text-gray-200"/>
+                            <AiOutlineUser className=" text-gray-500 dark:text-gray-400 text-lg dark:hover:text-gray-200" onClick={()=>router.push('/profile')}/>
                         </a>
                        
                         <a className="mx-3 cursor-pointer" onClick={()=>handleClick()}>
