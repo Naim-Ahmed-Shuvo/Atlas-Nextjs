@@ -39,14 +39,18 @@ const MenuDrawer = () => {
                             <Link href={'/categories'}>Categories</Link>
                             <BsChevronDown/>
                 </span>
-                <span className="flex items-center mx-3 my-5">
-                    <Link href={'/about'}>About Me</Link>
-                </span>
+              
                 <span className="flex items-center mx-3 my-5">
                     <Link href={'/blog'}>Blog</Link>
                 </span>
                 <span className="flex items-center mx-3 my-5">
-                    <Link href={'/contact'}>Contact</Link>                    
+                    <Link href={'/shop'}>Shop</Link>                    
+                </span>
+                <span className="flex items-center mx-3 my-5">
+                    <Link href={'/cart'}>Cart</Link>                    
+                </span>
+                <span className="flex items-center mx-3 my-5">
+                    <Link href={'/checkout'}>Checkout</Link>                    
                 </span>
                 <span className="flex items-center mx-3 my-5">
                     <Link href={'/profile'}>Profile</Link>

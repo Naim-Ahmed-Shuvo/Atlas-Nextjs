@@ -7,7 +7,7 @@ import { useStateValue } from "../store/StateProvider";
 
 const Nav = () => {
     const {theme, setTheme} = useTheme()
-    const [{},dispatch] = useStateValue()
+    const [{cart},dispatch] = useStateValue()
     const router = useRouter();
     const handleClick = () => {
       setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -58,8 +58,9 @@ const Nav = () => {
                         <a className="mx-3 cursor-pointer">
                             <AiFillFacebook className=" text-gray-500 dark:text-gray-400 text-lg font-popppins dark:hover:text-gray-200"/>
                         </a>
-                        <a className="mx-3 cursor-pointer">
+                        <a className="mx-3 cursor-pointer relative" onClick={()=>router.push("/cart")}>
                             <AiOutlineShoppingCart className=" text-gray-500 dark:text-gray-400 text-lg dark:hover:text-gray-200"/>
+                            <span className=" absolute bottom-1 left-3 text-red-500">{cart?.length}</span>
                         </a>
                         <a className="mx-3 cursor-pointer">
                             <AiOutlineUser className=" text-gray-500 dark:text-gray-400 text-lg dark:hover:text-gray-200" onClick={()=>router.push('/profile')}/>
@@ -73,7 +74,10 @@ const Nav = () => {
                     </div>
                 </div>
                 <div className=" cursor-pointer lg:hidden flex items-center">
-                    <AiOutlineShoppingCart className=" sm:text-lg"/>
+                   <div className="relative cursor-pointer" onClick={()=>router.push("/cart")}>
+                       <AiOutlineShoppingCart className=" sm:text-lg"/>
+                       <span className=" absolute bottom-1 left-3 text-red-500">{cart?.length}</span>
+                   </div>
                     <a className="mx-3 cursor-pointer" onClick={()=>handleClick()}>
                             {theme=='dark'?<BsCloudSun className=" text-gray-500 dark:text-gray-400 text-lg dark:hover:text-gray-200"/>:<BsFillMoonFill className=" text-gray-500 dark:text-gray-400 text-lg dark:hover:text-gray-200"/>}
                             
