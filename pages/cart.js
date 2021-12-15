@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { useRouter } from 'next/router';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs';
 import { MdRemoveShoppingCart } from 'react-icons/md';
 import Layout from '../layout/Layout'
@@ -10,6 +10,10 @@ import Link from 'next/link';
 const Cart = () => {
     const [{ cart},dispatch] = useStateValue();
     const router = useRouter()
+   
+    useEffect(()=>{
+        localStorage.getItem("USER") === null?router.push('/'):""
+      },[])
 
     const removeFromCArt = (id) => {
         // alert(id)

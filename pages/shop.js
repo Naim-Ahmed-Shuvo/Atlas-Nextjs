@@ -1,5 +1,6 @@
 import Image from 'next/image'
-import React from 'react'
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 import { BsArrowLeft, BsArrowRight, BsEye } from 'react-icons/bs'
 import { FiMessageSquare } from 'react-icons/fi'
 import Product from '../components/Product'
@@ -11,6 +12,10 @@ import img5 from "../public/blog/blog5.jpg"
 import { products } from '../utils/products'
 
 const Shop = () => {
+    const router = useRouter()
+    useEffect(()=>{
+        localStorage.getItem("USER") === null?router.push('/'):""
+      },[])
     return (
         <Layout>
              <section className="featuredposts py-10 mt-36">

@@ -15,6 +15,10 @@ import { useRouter } from 'next/router';
 const Checkout = () => {
     const [{cart},dispatch]= useStateValue()
     const router = useRouter()
+    
+    useEffect(()=>{
+        localStorage.getItem("USER") === null?router.push('/'):""
+      },[])
     useEffect(() => {
         // Check to see if this is a redirect back from Checkout
         const query = new URLSearchParams(window.location.search);

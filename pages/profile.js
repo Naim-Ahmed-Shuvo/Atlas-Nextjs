@@ -20,7 +20,7 @@ const Profile = () => {
 
             <section className="py-32">
                <div className="container mx-auto">
-                   <div className="profilemain card border w-5/12 text-center mx-auto p-6 dark:border dark:border-slate-600">
+                   <div className="profilemain card border  text-center mx-auto p-6 dark:border dark:border-slate-600">
                         <div>
                             {/* <Image src={image} alt="img"/> */}
                             {image&&<Image src={image??""} alt="img" height={100} width={100} className="rounded"/>}

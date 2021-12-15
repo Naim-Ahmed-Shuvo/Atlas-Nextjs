@@ -35,11 +35,7 @@ const MenuDrawer = () => {
       >
          <section className='bg-gray-700 px-10'>
            <div className=' mt-10'>
-                <span className="flex items-center mx-3 my-5">
-                            <Link href={'/categories'}>Categories</Link>
-                            <BsChevronDown/>
-                </span>
-              
+                
                 <span className="flex items-center mx-3 my-5">
                     <Link href={'/blog'}>Blog</Link>
                 </span>
