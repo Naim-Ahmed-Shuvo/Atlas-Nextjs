@@ -1,11 +1,16 @@
 
 import {auth} from '../utils/firebase';
 import firebase from "firebase"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useStateValue } from "../store/StateProvider";
+import { useRouter } from 'next/router';
 const Login = () => {
   const  [{},dispatch] = useStateValue()
-  
+  const router = useRouter();
+
+  useEffect(()=>{
+    localStorage.getItem("USER") !== null?router.push('/home'):""
+  },[])
   
 
     const handleClick = () => {
@@ -25,7 +30,9 @@ const Login = () => {
             
             dispatch({
                 type: "SET_LOGIN"
-            })        
+            }) 
+            
+            router.push('/home') 
             console.log("user: ",JSON.parse(localStorage.getItem("USER")));
         }).catch(err=>{
             console.log(err)

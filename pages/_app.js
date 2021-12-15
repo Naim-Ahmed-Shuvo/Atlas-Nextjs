@@ -9,9 +9,9 @@ function MyApp({ Component, pageProps }) {
  
   return <ThemeProvider attribute="class">
     <StateProvider initialState={initialState} reducer={reducer}>
-      <Layout>
+      
         <Component {...pageProps} />
-      </Layout>
+   
     </StateProvider>
   </ThemeProvider>
 }

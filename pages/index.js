@@ -10,25 +10,13 @@ import NewsLetter from '../components/NewsLetter'
 import { useStateValue } from '../store/StateProvider'
 import Router from 'next/router'
 import { useEffect } from 'react'
-import Login from './profile'
+import Login from '../components/Login'
 
 export default function Home() {
-  const {theme, setTheme} = useTheme()
-
-  const handleClick = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }
+ 
   return (
     <>
-  
-   
-   
-       <Hero/>
-       <FeaturedPosts/>
-       <PopularPosts/>
-       <RecentPosts/>
-       <NewsLetter/>
-
+      <Login/>
     </>
   )
 }

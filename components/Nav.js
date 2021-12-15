@@ -19,14 +19,14 @@ const Nav = () => {
             <div className="container mx-auto py-5  xs:px-2 sm:px-2 flex items-center justify-between ">
 
                 <div className="nav__logo__links flex items-center">
-                    <div className=" logo flex items-center">
-                        <div className=" h-10  w-10 bg-blue-600 rounded-full flex items-center justify-center mr-2">
-                            <span className="h-3  w-3 bg-white "></span>
-                        </div>
                         <Link href={"/"} passHref>
-                        <h4 className=" text-gray-800 dark:text-blue-100 font-bold">ATLAS</h4>
+                            <div className=" logo flex items-center cursor-pointer">
+                                <div className=" h-10  w-10 bg-blue-600 rounded-full flex items-center justify-center mr-2">
+                                    <span className="h-3  w-3 bg-white "></span>
+                                </div>
+                                <h4 className=" text-gray-800 dark:text-blue-100 font-bold">ATLAS</h4>
+                            </div>
                         </Link>
-                    </div>
                     <div className="links flex items-center ml-10 xs:hidden lg:flex">
                     <span className="flex items-center mx-3">
                         <Link href={'/categories'}>Categories</Link>
