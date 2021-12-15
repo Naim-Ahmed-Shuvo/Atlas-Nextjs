@@ -23,7 +23,7 @@ const Profile = () => {
                    <div className="profilemain card border w-5/12 text-center mx-auto p-6 dark:border dark:border-slate-600">
                         <div>
                             {/* <Image src={image} alt="img"/> */}
-                            <img src={image??""} alt="img" className="rounded mx-auto"/>
+                            {image&&<Image src={image??""} alt="img" height={100} width={100} className="rounded"/>}
                            
                         </div>
 

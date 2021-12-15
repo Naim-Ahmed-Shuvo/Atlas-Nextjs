@@ -6,6 +6,7 @@ import NewsLetter from '../components/NewsLetter'
 import PopularPosts from '../components/PopularPosts'
 import RecentPosts from '../components/RecentPosts'
 import Layout from '../layout/Layout'
+import MenuDrawer from '../utils/MenuDrawer'
 
 const Home = () => {
     const router = useRouter()
@@ -20,6 +21,7 @@ const Home = () => {
                 <PopularPosts/>
                 <RecentPosts/>
                 <NewsLetter/>
+               
             </Layout>
         </>
     )

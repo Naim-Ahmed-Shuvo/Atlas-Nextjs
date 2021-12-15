@@ -3,6 +3,7 @@ import { ThemeProvider } from 'next-themes'
 import Layout from '../layout/Layout'
 import StateProvider, { useStateValue } from '../store/StateProvider'
 import reducer, { initialState } from '../store/reducer'
+import MenuDrawer from '../utils/MenuDrawer'
 
 
 function MyApp({ Component, pageProps }) {
@@ -11,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <StateProvider initialState={initialState} reducer={reducer}>
       
         <Component {...pageProps} />
-   
+        <MenuDrawer/>
     </StateProvider>
   </ThemeProvider>
 }

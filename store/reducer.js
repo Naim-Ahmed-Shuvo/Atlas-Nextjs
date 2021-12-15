@@ -1,7 +1,8 @@
 export const initialState = {
     user: null,
     count: "hello",
-    isAuthenticated: false
+    isAuthenticated: false.valueOf,
+    openMenuDrawer: false
 }
 
 const reducer = (state,action)=>{
@@ -23,6 +24,18 @@ const reducer = (state,action)=>{
            return{
                ...state,
                isAuthenticated: true
+           }
+          
+       case "TOGGLE_DRAWER":
+           return{
+               ...state,
+               openMenuDrawer: true
+           }
+          
+       case "CLOSE_DRAWER":
+           return{
+               ...state,
+               openMenuDrawer: false
            }
           
    
