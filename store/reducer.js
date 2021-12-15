@@ -1,7 +1,7 @@
 export const initialState = {
     user: null,
     count: "hello",
-    isAuthenticated: false
+    isAuthenticated: true
 }
 
 const reducer = ({state,action})=>{
